@@ -1,24 +1,135 @@
-/******************************************
-/* CSS
-/*******************************************/
-
-/* Box Model Hack */
-*{
-  box-sizing: border-box;
-}
-
-/******************************************
-/* LAYOUT
-/*******************************************/
 #picImg{
   display: none;
-  width:80vw;
-  margin: 0 auto;
+ /* width:50vw!important;*/
+  width:auto;
+  height:30vh;
 }
 
 #picVid{
   display: none;
+  
+  /*height:50%;*/
 }
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+
+#picImg:hover{
+  cursor:pointer;
+}
+
+.nasa{
+  min-width:100vw;
+  min-height:100vh!important;
+}
+
+.button-group{
+  min-width:250px;
+}
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 10; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9); 
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+
+
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.in-date{
+  max-width:300px;
+}
+
+
+@media only screen and (min-width:1300px){
+
+  .modal-content {
+    width: auto;
+    height:80vh;
+  }
+
+  .nasa-items {
+    max-width: 1200px;
+    height:auto;
+  }
+
+  iframe{
+    width:1080px;
+    height:607.5px;
+  }
+
+} 
+
+@media only screen and (max-width:1299px){
+
+  iframe{
+    width:900px;
+    height:506.25px;
+  }
+
+} 
+
+@media only screen and (max-width:1000px){
+
+  iframe{
+    width:600px;
+    height:337.75px;
+  }
+
+} 
+
+@media only screen and (max-width:800px){
+
+  #picImg {
+    height:auto;
+    width: 50vw;
+  }
+
+} 
+
+@media only screen and (max-width:700px){
+
+  iframe{
+    width:360px;
+    height:275px;
+  }
+
+} 
